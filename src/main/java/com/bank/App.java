@@ -1,4 +1,4 @@
-package example;
+package com.bank;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * 
  * @author Gursimran Singh
  */
+
 @SpringBootApplication
 public class App 
 {
