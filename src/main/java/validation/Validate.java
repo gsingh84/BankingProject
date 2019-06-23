@@ -18,29 +18,27 @@ public class Validate
 	
 	public boolean emailPassword(String email, String password)
 	{
-		if (email == null)
+		if (email == null || password == null)
 		{
 			return false;
 		}
 		
+		if (!isValidEmail(email) || password.isEmpty())
+		{
+			errors.put("loginError", "Invalid email or password!");
+			return false;
+		}
+		
+		return true;
+	}
+	
+	private boolean isValidEmail(String email)
+	{
 		String regex = "^(.+)@(.+)$";
 		Pattern pattern = Pattern.compile(regex);
 		Matcher matcher = pattern.matcher(email);
-			
-		HandleAccounts accounts = new HandleAccounts();
 		
-		if (!matcher.matches() || password.isEmpty())
-		{
-			errors.put("loginError", "Invalid email or password!");
-			return false;
-		}
-		else if (!accounts.login(email, password)) 
-		{
-			errors.put("loginError", "Invalid email or password!");
-			return false;
-		}
-		
-		return accounts.login(email, password);
+		return matcher.matches();
 	}
 
 	public Map<String, String> getErrors()

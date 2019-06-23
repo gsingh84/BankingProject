@@ -88,13 +88,13 @@
 				</div>	
 				<div class="row form-group">
 					<div class="col text-right mt-3">
-						<button type="submit" class="btn btn-block bg-warning">Create</button>
+						<button name="submit" type="submit" class="btn btn-block bg-warning">Create</button>
 					</div>
 				</div>
 				
 				<div class="row form-group">
 					<div class="col text-right">
-						<a href="/" role="button" aria-pressed="true">Go Bank to Login</a>
+						<a href="/" role="button" aria-pressed="true">Go Back to Login</a>
 					</div>
 				</div>
 			</form>	

@@ -70,7 +70,7 @@
 				
 				<div class="row form-group">
 					<div class="col text-right mt-3">
-						<button type="submit" class="btn btn-block bg-warning">Sign In</button>
+						<button name="submit" type="submit" class="btn btn-block bg-warning">Sign In</button>
 					</div>
 				</div>
 			</form>	
